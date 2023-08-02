@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Handjet&display=swap">
+    <script src="script.js"></script>
 </head>
+
 <body>
-    <h1>
-        Rock Paper Scissor
-    </h1>
-    
+    <div class="header">
+        <h1>
+            Stone Paper Scissor
+        </h1>
+    </div>
+    <div class="container">
+        <div class="stats">
+            <div class="player">
+                Your Score: <span id="player">0</span>
+            </div>
+            <div class="computer">
+                Computer Score: <span id="computer">0</span>
+            </div>
+        </div>
+        <div class="chosen">
+            <div class="playerChoice">
+                You chose:
+                <div id="playerChoice" class="img">
+                    ✊
+                </div>
+            </div>
+            <div class="computerChoice">
+                Computer chose:
+                <div id="computerChoice" class="img">
+                    ✋
+                </div>
+            </div>
+        </div>
+        <div class="result">
+            Choose an option from below to play:
+        </div>
+        <div class="imgs">
+            <div id="Stone" class="img">
+                ✊
+            </div>
+            <div id="Paper" class="img">
+                ✋
+            </div>
+            <div id="Scissor" class="img">
+                ✌
+            </div>
+        </div>
+        <div class="final">
+        </div>
+    </div>
 </body>
+
 </html>
