@@ -71,13 +71,23 @@ document.addEventListener("DOMContentLoaded", function () {
         computerScoreDiv.innerText = computerScore;
         console.log("UpdateUI");
 
-        if (playerScore === 5 || computerScore === 5) {
-            const finalResult = playerScore === 5 ? "You win the game!" : "Computer wins the game!";
+        if (playerScore === 5) {
             const finalDiv = document.querySelector(".final");
-            finalDiv.innerText = finalResult;
+            finalDiv.innerText = "You win!";
+            alert("You win!");
             buttons.forEach((button) => {
                 button.removeEventListener('click', playRoundOnClick);
             });
+            reset();
+        }
+        if (computerScore === 5) {
+            const finalDiv = document.querySelector(".final");
+            finalDiv.innerText = "You lose!";
+            alert("You lose!");
+            buttons.forEach((button) => {
+                button.removeEventListener('click', playRoundOnClick);
+            });
+            reset();
         }
     }
 
@@ -85,12 +95,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const stoneButton = document.getElementById('Stone');
     const paperButton = document.getElementById('Paper');
     const scissorButton = document.getElementById('Scissor');
-    const res = document.getElementById('reset');
+    const resetButton = document.getElementById('reset');
 
     stoneButton.addEventListener('click', playRoundOnClick);
     paperButton.addEventListener('click', playRoundOnClick);
     scissorButton.addEventListener('click', playRoundOnClick);
-    res.addEventListener('click', reset);
+    resetButton.addEventListener('click', reset);
+
+    // const buttons = document.querySelectorAll('button');
 
     // function to play a round when a button is clicked
     function playRoundOnClick(event) {
@@ -112,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
             button.addEventListener('click', playRoundOnClick);
         });
 
-        updateUI("🍆", "🍆", "🍆", 0, 0);
+        updateUI("💀", "💀", "💀", 0, 0);
     }
 
     // Define the buttons variable here so that it's accessible throughout the script
