@@ -19,10 +19,10 @@
     <div class="container">
         <div class="stats">
             <div class="player">
-                Your Score: <span id="player">0</span>
+                Your Score: <span id="playerScore">0</span>
             </div>
             <div class="computer">
-                Computer Score: <span id="computer">0</span>
+                Computer Score: <span id="computerScore">0</span>
             </div>
         </div>
         <div class="chosen">
@@ -39,21 +39,27 @@
                 </div>
             </div>
         </div>
-        <div class="result">
+        <div class="currRound">
+            Current Round: <span id="currRound">player Won!!</span>
+        </div>
+        <div class="text">
             Choose an option from below to play:
         </div>
         <div class="imgs">
-            <div id="Stone" class="img">
-                ✊
+            <div id="Stone" class="img1">
+                <button>✊</button>
             </div>
-            <div id="Paper" class="img">
-                ✋
+            <div id="Paper" class="img1">
+                <button>✋</button>
             </div>
-            <div id="Scissor" class="img">
-                ✌
+            <div id="Scissor" class="img1">
+                <button>✌</button>
             </div>
         </div>
         <div class="final">
+        </div>
+        <div class="reset">
+            <button onclick="reset()">Reset</button>
         </div>
     </div>
 </body>
