@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: 'Handjet', sans-serif;
     font-size: 42px;
-    border: 1px dotted red;
+    /* border: 1px dotted red; */
 }
 
 body{
